@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require("path");
 const exphbs = require("express-handlebars");
 const bodyParser = require("body-parser");
 const methodOverride = require("method-override");
@@ -57,6 +58,9 @@ app.use(function(req, res, next) {
 //BOdy-parser middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+//static folder
+app.use(express.static(path.join(__dirname, "public")));
 
 //Index route
 app.get("/", (req, res) => {
