@@ -73,14 +73,6 @@ app.use(bodyParser.json());
 //static folder
 app.use(express.static(path.join(__dirname, "public")));
 
-//Index route
-app.get("/", (req, res) => {
-  const title = "Welcome";
-  res.render("INDEX", {
-    title: title
-  });
-});
-
 //About route
 app.get("/about", (req, res) => {
   res.render("about");
