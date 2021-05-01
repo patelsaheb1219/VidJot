@@ -1,6 +1,6 @@
 if (process.env.NODE_ENV === "production") {
   module.exports = {
-    mongoURI: "mongodb://kishan:kishan1219@ds143163.mlab.com:43163/vidjot-prod"
+    mongoURI: "mongodb+srv://kishan123:kishan123@vidjot.zycp8.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
   };
 } else {
   module.exports = {
